@@ -70,12 +70,55 @@ const PROJECTS = [
 ];
 
 const SKILLS = [
-  { icon: "☕", label: "Languages", items: [" Java (Core + OOP)", "Python", "C"] },
-  { icon: "🌐", label: "Frontend", items: ["React.js", "HTML5 / CSS3", "JavaScript", "Tailwind CSS"] },
-  { icon: "🗄️", label: "Databases", items: ["MongoDB", "Firebase", "PostgreSQL", "SQL", "Pinecone"] },
-  { icon: "⚙️", label: "Tools", items: ["Git & GitHub", "n8n", "IntelliJ IDEA", "VS Code", "Cloudinary"] },
-  { icon: "💡", label: "Concepts", items: ["OOP", "DSA", "Cloud (IaaS/PaaS/SaaS)", "REST APIs"] },
-  { icon: "🤖", label: "AI / Automation", items: ["LLaMA 3 / Ollama", "GenAI", "Low-code automation", "Chatbot Dev"] },
+  {
+    icon: "☕", label: "Languages", items: [
+      { name: "Java (Core + OOP)", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg" },
+      { name: "Python", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" },
+      { name: "C", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/c/c-original.svg" }
+    ]
+  },
+  {
+    icon: "🌐", label: "Frontend", items: [
+      { name: "React.js", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" },
+      { name: "HTML5 / CSS3", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" },
+      { name: "JavaScript", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" },
+      { name: "Tailwind CSS", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg" }
+    ]
+  },
+  {
+    icon: "🗄️", label: "Databases", items: [
+      { name: "MongoDB", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original.svg" },
+      { name: "Firebase", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/firebase/firebase-original.svg" },
+      { name: "PostgreSQL", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg" },
+      { name: "SQL", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/azuresqldatabase/azuresqldatabase-original.svg" },
+      { name: "Pinecone", logo: "🌲" }
+    ]
+  },
+  {
+    icon: "⚙️", label: "Tools", items: [
+      { name: "Git & GitHub", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg" },
+      { name: "n8n", logo: "⚙️" },
+      { name: "IntelliJ IDEA", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/intellij/intellij-original.svg" },
+      { name: "VS Code", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vscode/vscode-original.svg" },
+      { name: "Cloudinary", logo: "☁️" }
+    ]
+  },
+  {
+    icon: "💡", label: "Concepts", items: [
+      { name: "OOP", logo: "🧩" },
+      { name: "DSA", logo: "📊" },
+      { name: "Cloud (IaaS/PaaS/SaaS)", logo: "☁️" },
+      { name: "REST APIs", logo: "🔗" }
+    ]
+  },
+  {
+    icon: "🤖", label: "AI / Automation", items: [
+      { name: "LLaMA 3 / Ollama", logo: "🦙" },
+      { name: "GenAI", logo: "✨" },
+      { name: "Low-code automation", logo: "⚡" },
+      { name: "Chatbot Dev", logo: "💬" }
+    ]
+  },
 ];
 
 const INTERNSHIPS = [
@@ -335,8 +378,7 @@ export default function App() {
           marginBottom: "0.3rem",
           animation: "fadeUp 0.8s 0.1s ease both",
         }}>
-          Pooja 
-          <em style={{ color: "var(--amber-d)", fontStyle: "italic" }}>Umanath</em>
+          Pooja{" "}<em style={{ color: "var(--amber-d)", fontStyle: "italic" }}>Umanath</em>
         </h1>
 
         <p style={{
@@ -398,20 +440,23 @@ export default function App() {
         {/* Social row */}
         <div style={{ display: "flex", gap: "1.5rem", marginTop: "2.5rem", animation: "fadeUp 0.8s 0.5s ease both" }}>
           {[
-            { label: "LinkedIn", href: "https://linkedin.com/in/pooja-umanath-37154529b" },
-            { label: "LeetCode", href: "https://leetcode.com/u/PoojaU3/" },
-            { label: "HackerRank", href: "https://www.hackerrank.com/profile/poojaumanath3" },
-            { label: "GeeksForGeeks", href: "https://www.geeksforgeeks.org/profile/poojaumjg2t" },
+            { label: "LinkedIn", href: "https://linkedin.com/in/pooja-umanath-37154529b", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linkedin/linkedin-original.svg" },
+            { label: "LeetCode", href: "https://leetcode.com/u/PoojaU3/", icon: "https://cdn.simpleicons.org/leetcode" },
+            { label: "HackerRank", href: "https://www.hackerrank.com/profile/poojaumanath3", icon: "https://cdn.simpleicons.org/hackerrank" },
+            { label: "GeeksForGeeks", href: "https://www.geeksforgeeks.org/profile/poojaumjg2t", icon: "https://cdn.simpleicons.org/geeksforgeeks" },
           ].map(l => (
             <a key={l.label} href={l.href} target="_blank" style={{
               color: "var(--brown-m)", textDecoration: "none",
-              fontSize: "0.78rem", fontWeight: 600,
-              borderBottom: "1px dashed var(--sand-d)",
-              paddingBottom: 2, transition: "color 0.2s, border-color 0.2s",
+              fontSize: "0.85rem", fontWeight: 600,
+              display: "flex", alignItems: "center", gap: "0.45rem",
+              transition: "transform 0.25s, color 0.25s",
             }}
-              onMouseEnter={e => { e.target.style.color = "var(--amber-d)"; e.target.style.borderColor = "var(--amber-d)"; }}
-              onMouseLeave={e => { e.target.style.color = "var(--brown-m)"; e.target.style.borderColor = "var(--sand-d)"; }}
-            >{l.label}</a>
+              onMouseEnter={e => { e.currentTarget.style.color = "var(--amber-d)"; e.currentTarget.style.transform = "translateY(-2px)"; }}
+              onMouseLeave={e => { e.currentTarget.style.color = "var(--brown-m)"; e.currentTarget.style.transform = "translateY(0)"; }}
+            >
+              <img src={l.icon} alt={l.label} style={{ width: 16, height: 16 }} />
+              {l.label}
+            </a>
           ))}
         </div>
       </div>
@@ -514,6 +559,7 @@ export default function App() {
         { n: "3", l: "Internships" },
         { n: "7+", l: "Certifications" },
         { n: "1", l: "Hackathon Wins" },
+
       ].map((s, i) => (
         <div key={i} style={{ textAlign: "center" }}>
           <span style={{
@@ -603,7 +649,15 @@ export default function App() {
                     borderRadius: 50,
                     fontSize: "0.72rem", fontWeight: 500,
                     border: "1px solid var(--sand)",
-                  }}>{it}</span>
+                    display: "flex", alignItems: "center", gap: "0.4rem",
+                  }}>
+                    {it.logo.startsWith("http") ? (
+                      <img src={it.logo} alt={it.name} style={{ width: 14, height: 14 }} />
+                    ) : (
+                      <span style={{ fontSize: "0.85rem", lineHeight: 1 }}>{it.logo}</span>
+                    )}
+                    {it.name}
+                  </span>
                 ))}
               </div>
             </div>
@@ -999,19 +1053,23 @@ export default function App() {
 
         <div style={{ display: "flex", justifyContent: "center", gap: "2.5rem", flexWrap: "wrap" }}>
           {[
-            { label: "GitHub", href: "https://github.com/pooja3122005" },
-            { label: "LinkedIn", href: "https://linkedin.com/in/pooja-umanath-37154529b" },
-            { label: "LeetCode", href: "https://leetcode.com/u/PoojaU3/" },
-            { label: "HackerRank", href: "https://www.hackerrank.com/profile/poojaumanath3" },
+            { label: "GitHub", href: "https://github.com/pooja3122005", icon: "https://cdn.simpleicons.org/github/white" },
+            { label: "LinkedIn", href: "https://linkedin.com/in/pooja-umanath-37154529b", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linkedin/linkedin-original.svg" },
+            { label: "LeetCode", href: "https://leetcode.com/u/PoojaU3/", icon: "https://cdn.simpleicons.org/leetcode/white" },
+            { label: "HackerRank", href: "https://www.hackerrank.com/profile/poojaumanath3", icon: "https://cdn.simpleicons.org/hackerrank/white" },
           ].map(l => (
             <a key={l.label} href={l.href} target="_blank" style={{
               color: "rgba(255,255,255,0.75)", textDecoration: "none",
               fontSize: "0.85rem", fontWeight: 600,
-              transition: "color 0.2s",
+              display: "flex", alignItems: "center", gap: "0.5rem",
+              transition: "transform 0.25s, color 0.25s",
             }}
-              onMouseEnter={e => e.target.style.color = "white"}
-              onMouseLeave={e => e.target.style.color = "rgba(255,255,255,0.75)"}
-            >{l.label} →</a>
+              onMouseEnter={e => { e.currentTarget.style.color = "white"; e.currentTarget.style.transform = "translateY(-2px)"; e.currentTarget.querySelector("img").style.opacity = "1"; }}
+              onMouseLeave={e => { e.currentTarget.style.color = "rgba(255,255,255,0.75)"; e.currentTarget.style.transform = "translateY(0)"; e.currentTarget.querySelector("img").style.opacity = "0.75"; }}
+            >
+              <img src={l.icon} alt={l.label} style={{ width: 18, height: 18, opacity: 0.75, transition: "opacity 0.25s" }} />
+              {l.label}
+            </a>
           ))}
         </div>
       </Reveal>
