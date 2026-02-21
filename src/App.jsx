@@ -513,8 +513,7 @@ export default function App() {
         { n: "4+", l: "Projects Built" },
         { n: "3", l: "Internships" },
         { n: "7+", l: "Certifications" },
-        { n: "2", l: "Hackathon Wins" },
-        { n: "84.3%", l: "HSC Score" },
+        { n: "1", l: "Hackathon Wins" },
       ].map((s, i) => (
         <div key={i} style={{ textAlign: "center" }}>
           <span style={{
