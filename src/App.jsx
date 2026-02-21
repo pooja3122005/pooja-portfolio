@@ -335,7 +335,7 @@ export default function App() {
           marginBottom: "0.3rem",
           animation: "fadeUp 0.8s 0.1s ease both",
         }}>
-          Pooja<br />
+          Pooja 
           <em style={{ color: "var(--amber-d)", fontStyle: "italic" }}>Umanath</em>
         </h1>
 
