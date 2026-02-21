@@ -70,7 +70,7 @@ const PROJECTS = [
 ];
 
 const SKILLS = [
-  { icon: "☕", label: "Languages", items: ["Java (Core + OOP)", "Python", "C"] },
+  { icon: "☕", label: "Languages", items: [" Java (Core + OOP)", "Python", "C"] },
   { icon: "🌐", label: "Frontend", items: ["React.js", "HTML5 / CSS3", "JavaScript", "Tailwind CSS"] },
   { icon: "🗄️", label: "Databases", items: ["MongoDB", "Firebase", "PostgreSQL", "SQL", "Pinecone"] },
   { icon: "⚙️", label: "Tools", items: ["Git & GitHub", "n8n", "IntelliJ IDEA", "VS Code", "Cloudinary"] },
@@ -99,6 +99,25 @@ const INTERNSHIPS = [
     year: "2024",
     type: "Training Programme",
     desc: "Deep-dived into core Java, design patterns, and object-oriented application development. Earned formal certification.",
+  },
+];
+
+const EDUCATION = [
+  {
+    degree: "B.Tech, Information Technology",
+    school: "Panimalar Engineering College, Chennai",
+    period: "Sep 2023 – Present",
+    icon: "🎓",
+    type: "Undergraduate",
+    detail: "Currently pursuing Bachelor of Technology in Information Technology, building expertise in Java, AI systems, web development, and cloud computing.",
+  },
+  {
+    degree: "Higher Secondary Education",
+    school: "Infant Jesus Matric Hr. Sec. School, Kanchipuram",
+    period: "Jun 2022 – Mar 2023",
+    icon: "📚",
+    type: "HSC · 84.3%",
+    detail: "Completed Higher Secondary Education with a strong academic record of 84.3%, building a solid foundation for engineering studies.",
   },
 ];
 
@@ -252,7 +271,7 @@ export default function App() {
       }}>Pooja U</span>
 
       <div style={{ display: "flex", gap: "2.5rem", listStyle: "none" }}>
-        {["skills", "projects", "experience", "achievements", "contact"].map(s => (
+        {["skills", "projects", "education", "experience", "achievements", "contact"].map(s => (
           <a key={s} href={`#${s}`} className="nav-link" style={{
             textDecoration: "none",
             color: "var(--brown-m)",
@@ -348,6 +367,21 @@ export default function App() {
             onMouseEnter={e => { e.target.style.background = "var(--terra)"; e.target.style.transform = "translateY(-2px)"; e.target.style.boxShadow = "0 10px 28px rgba(201,113,31,0.38)"; }}
             onMouseLeave={e => { e.target.style.background = "var(--amber-d)"; e.target.style.transform = ""; e.target.style.boxShadow = ""; }}
           >View My Work →</a>
+
+          <a
+            href="/resume.pdf"
+            download="Pooja_Umanath_Resume.pdf"
+            style={{
+              background: "transparent", color: "var(--brown)",
+              padding: "0.9rem 2.2rem", borderRadius: 50,
+              textDecoration: "none", fontWeight: 700, fontSize: "0.9rem",
+              border: "2px solid var(--amber-d)",
+              transition: "all 0.25s",
+              display: "inline-flex", alignItems: "center", gap: "0.5rem",
+            }}
+            onMouseEnter={e => { e.currentTarget.style.background = "var(--amber-d)"; e.currentTarget.style.color = "white"; e.currentTarget.style.transform = "translateY(-2px)"; e.currentTarget.style.boxShadow = "0 10px 28px rgba(201,113,31,0.28)"; }}
+            onMouseLeave={e => { e.currentTarget.style.background = "transparent"; e.currentTarget.style.color = "var(--brown)"; e.currentTarget.style.transform = ""; e.currentTarget.style.boxShadow = ""; }}
+          >⬇ Download Resume</a>
 
           <a href="https://github.com/pooja3122005" target="_blank" style={{
             background: "transparent", color: "var(--brown)",
@@ -676,6 +710,91 @@ export default function App() {
     </section>
   );
 
+  // ── EDUCATION ─────────────────────────────────────────────────────
+  const Education = () => (
+    <section id="education" style={{ padding: "6rem", background: "var(--cream)" }}>
+      <Reveal>
+        <SectionHeader label="Academic Background" title="My <em style='color:var(--amber-d);font-style:italic'>Education</em>" />
+      </Reveal>
+      <div style={{ display: "flex", flexDirection: "column", gap: "2rem" }}>
+        {EDUCATION.map((edu, i) => (
+          <Reveal key={i} delay={i * 0.12}>
+            <div style={{
+              background: "white",
+              borderRadius: 24,
+              border: "1px solid var(--sand)",
+              padding: "2.5rem",
+              display: "grid",
+              gridTemplateColumns: "auto 1fr",
+              gap: "2rem",
+              alignItems: "flex-start",
+              transition: "all 0.3s",
+              boxShadow: "0 4px 20px rgba(45,21,6,0.04)",
+            }}
+              onMouseEnter={e => { e.currentTarget.style.boxShadow = "0 16px 48px rgba(45,21,6,0.12)"; e.currentTarget.style.transform = "translateY(-4px)"; }}
+              onMouseLeave={e => { e.currentTarget.style.boxShadow = "0 4px 20px rgba(45,21,6,0.04)"; e.currentTarget.style.transform = ""; }}
+            >
+              {/* Icon */}
+              <div style={{
+                width: 64, height: 64,
+                background: "linear-gradient(135deg, var(--blush), var(--amber-l))",
+                borderRadius: 20,
+                display: "flex", alignItems: "center", justifyContent: "center",
+                fontSize: "1.9rem",
+                flexShrink: 0,
+              }}>{edu.icon}</div>
+
+              {/* Info */}
+              <div>
+                <div style={{ display: "flex", alignItems: "center", gap: "1rem", flexWrap: "wrap", marginBottom: "0.5rem" }}>
+                  <h3 style={{
+                    fontFamily: "'Cormorant Garamond', serif",
+                    fontSize: "1.3rem", fontWeight: 700,
+                    color: "var(--brown)", margin: 0,
+                  }}>{edu.degree}</h3>
+                  <span style={{
+                    background: "rgba(232,144,58,0.12)",
+                    color: "var(--amber-d)",
+                    padding: "0.2rem 0.75rem",
+                    borderRadius: 50,
+                    fontSize: "0.68rem", fontWeight: 700,
+                    letterSpacing: "0.05em",
+                    whiteSpace: "nowrap",
+                  }}>{edu.type}</span>
+                </div>
+
+                <div style={{
+                  display: "flex", alignItems: "center", gap: "1.2rem",
+                  marginBottom: "0.8rem", flexWrap: "wrap",
+                }}>
+                  <span style={{
+                    fontSize: "0.88rem", fontWeight: 600,
+                    color: "var(--amber-d)",
+                    display: "flex", alignItems: "center", gap: "0.3rem",
+                  }}>🏛 {edu.school}</span>
+
+                  <span style={{
+                    fontFamily: "'JetBrains Mono', monospace",
+                    fontSize: "0.75rem",
+                    color: "var(--brown-m)",
+                    display: "flex", alignItems: "center", gap: "0.3rem",
+                  }}>📅 {edu.period}</span>
+                </div>
+
+                <p style={{
+                  fontSize: "0.88rem",
+                  color: "var(--brown-m)",
+                  lineHeight: 1.75,
+                  margin: 0,
+                }}>{edu.detail}</p>
+              </div>
+            </div>
+          </Reveal>
+        ))}
+      </div>
+    </section>
+  );
+
   // ── EXPERIENCE ────────────────────────────────────────────────────
   const Experience = () => (
     <section id="experience" style={{ padding: "6rem", background: "#FFF8F0" }}>
@@ -992,6 +1111,7 @@ export default function App() {
       <StatsBar />
       <Skills />
       <Projects />
+      <Education />
       <Experience />
       <Achievements />
       <Certifications />
