@@ -43,39 +43,94 @@ const PROJECTS = [
     tags: ["LLaMA 3", "Ollama", "Python", "AI/ML"],
     link: "https://github.com/pooja3122005",
   },
+
   {
     num: "02",
+    emoji: "⚡",
+    title: "Multi-Language Code Runner",
+    desc: "Web-based code execution platform supporting Java, Python, and js with real-time output, error handling, and secure execution.",
+    tags: ["React.js", "Node.js", "Compiler API", "JavaScript"],
+    link: "https://github.com/pooja3122005",
+  },
+
+  {
+    num: "03",
     emoji: "🌍",
     title: "Multilingual College Chatbot",
     desc: "Hackathon-winning chatbot supporting multiple languages to answer queries on scholarships, academics, and policies — with Telegram & WhatsApp escalation.",
     tags: ["NLP", "Telegram API", "n8n", "Pinecone"],
     link: "https://github.com/pooja3122005",
   },
+
   {
-    num: "03",
+    num: "04",
     emoji: "🚗",
     title: "Arduino Smart Car",
     desc: "Embedded systems project featuring intelligent sensor integration, obstacle detection, and autonomous movement via microcontroller programming.",
     tags: ["Arduino", "C/C++", "Sensors", "Embedded"],
     link: "https://github.com/pooja3122005",
   },
+
   {
-    num: "04",
+    num: "05",
     emoji: "🛒",
     title: "E-commerce Platform",
-    desc: "Multiple production-grade e-commerce sites with React, Firebase auth, real-time DB, and a strong focus on responsive UI/UX excellence.",
+    desc: "Multiple production-grade e-commerce sites with React, Firebase authentication, real-time database integration, and responsive user experience design.",
     tags: ["React.js", "Firebase", "Tailwind", "JavaScript"],
     link: "https://github.com/pooja3122005",
   },
 ];
 
 const SKILLS = [
-  { icon: "☕", label: "Languages", items: ["Java (Core + OOP)", "Python", "C"] },
-  { icon: "🌐", label: "Frontend", items: ["React.js", "HTML5 / CSS3", "JavaScript", "Tailwind CSS"] },
-  { icon: "🗄️", label: "Databases", items: ["MongoDB", "Firebase", "PostgreSQL", "SQL", "Pinecone"] },
-  { icon: "⚙️", label: "Tools", items: ["Git & GitHub", "n8n", "IntelliJ IDEA", "VS Code", "Cloudinary"] },
-  { icon: "💡", label: "Concepts", items: ["OOP", "DSA", "Cloud (IaaS/PaaS/SaaS)", "REST APIs"] },
-  { icon: "🤖", label: "AI / Automation", items: ["LLaMA 3 / Ollama", "GenAI", "Low-code automation", "Chatbot Dev"] },
+  {
+    icon: "☕", label: "Languages", items: [
+      { name: "Java (Core + OOP)", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg" },
+      { name: "Python", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" },
+      { name: "C", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/c/c-original.svg" }
+    ]
+  },
+  {
+    icon: "🌐", label: "Frontend", items: [
+      { name: "React.js", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" },
+      { name: "HTML5 / CSS3", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" },
+      { name: "JavaScript", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" },
+      { name: "Tailwind CSS", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg" }
+    ]
+  },
+  {
+    icon: "🗄️", label: "Databases", items: [
+      { name: "MongoDB", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original.svg" },
+      { name: "Firebase", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/firebase/firebase-original.svg" },
+      { name: "PostgreSQL", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg" },
+      { name: "SQL", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/azuresqldatabase/azuresqldatabase-original.svg" },
+      { name: "Pinecone", logo: "🌲" }
+    ]
+  },
+  {
+    icon: "⚙️", label: "Tools", items: [
+      { name: "Git & GitHub", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg" },
+      { name: "n8n", logo: "⚙️" },
+      { name: "IntelliJ IDEA", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/intellij/intellij-original.svg" },
+      { name: "VS Code", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vscode/vscode-original.svg" },
+      { name: "Cloudinary", logo: "☁️" }
+    ]
+  },
+  {
+    icon: "💡", label: "Concepts", items: [
+      { name: "OOP", logo: "🧩" },
+      { name: "DSA", logo: "📊" },
+      { name: "Cloud (IaaS/PaaS/SaaS)", logo: "☁️" },
+      { name: "REST APIs", logo: "🔗" }
+    ]
+  },
+  {
+    icon: "🤖", label: "AI / Automation", items: [
+      { name: "LLaMA 3 / Ollama", logo: "🦙" },
+      { name: "GenAI", logo: "✨" },
+      { name: "Low-code automation", logo: "⚡" },
+      { name: "Chatbot Dev", logo: "💬" }
+    ]
+  },
 ];
 
 const INTERNSHIPS = [
@@ -102,6 +157,25 @@ const INTERNSHIPS = [
   },
 ];
 
+const EDUCATION = [
+  {
+    degree: "B.Tech, Information Technology",
+    school: "Panimalar Engineering College, Chennai",
+    period: "Sep 2023 – Present",
+    icon: "🎓",
+    type: "Undergraduate",
+    detail: "Currently pursuing Bachelor of Technology in Information Technology, building expertise in Java, AI systems, web development, and cloud computing.",
+  },
+  {
+    degree: "Higher Secondary Education",
+    school: "Infant Jesus Matric Hr. Sec. School, Kanchipuram",
+    period: "Jun 2022 – Mar 2023",
+    icon: "📚",
+    type: "HSC · 84.3%",
+    detail: "Completed Higher Secondary Education with a strong academic record of 84.3%, building a solid foundation for engineering studies.",
+  },
+];
+
 const ACHIEVEMENTS = [
   {
     medal: "🥈",
@@ -109,6 +183,7 @@ const ACHIEVEMENTS = [
     event: "G-Hacks · GDG on Campus, Panimalar",
     desc: "Built a multilingual, platform-independent chatbot with Telegram integration and WhatsApp/Email escalation — securing 2nd place among competitive college teams.",
     img: "/ghacks.jpeg",
+    img2: "/ghacks2.jpg",
   },
   {
     medal: "🏆",
@@ -252,7 +327,7 @@ export default function App() {
       }}>Pooja U</span>
 
       <div style={{ display: "flex", gap: "2.5rem", listStyle: "none" }}>
-        {["skills", "projects", "experience", "achievements", "contact"].map(s => (
+        {["skills", "projects", "education", "experience", "achievements", "contact"].map(s => (
           <a key={s} href={`#${s}`} className="nav-link" style={{
             textDecoration: "none",
             color: "var(--brown-m)",
@@ -316,8 +391,7 @@ export default function App() {
           marginBottom: "0.3rem",
           animation: "fadeUp 0.8s 0.1s ease both",
         }}>
-          Pooja<br />
-          <em style={{ color: "var(--amber-d)", fontStyle: "italic" }}>Umanath</em>
+          Pooja{" "}<em style={{ color: "var(--amber-d)", fontStyle: "italic" }}>Umanath</em>
         </h1>
 
         <p style={{
@@ -326,7 +400,7 @@ export default function App() {
           color: "var(--brown-l)", marginBottom: "1.8rem",
           animation: "fadeUp 0.8s 0.2s ease both",
         }}>
-          Java Developer · AI Systems Builder · SIH 2025 Finalist
+          Java Developer · AI Systems Builder · SIH 2025 Finalist · G Hacks 1st Runner-Up
         </p>
 
         <p style={{
@@ -349,6 +423,21 @@ export default function App() {
             onMouseLeave={e => { e.target.style.background = "var(--amber-d)"; e.target.style.transform = ""; e.target.style.boxShadow = ""; }}
           >View My Work →</a>
 
+          <a
+            href="/Pooja_Resume_intern.pdf"
+            download="Pooja_Umanath_Resume.pdf"
+            style={{
+              background: "transparent", color: "var(--brown)",
+              padding: "0.9rem 2.2rem", borderRadius: 50,
+              textDecoration: "none", fontWeight: 700, fontSize: "0.9rem",
+              border: "2px solid var(--amber-d)",
+              transition: "all 0.25s",
+              display: "inline-flex", alignItems: "center", gap: "0.5rem",
+            }}
+            onMouseEnter={e => { e.currentTarget.style.background = "var(--amber-d)"; e.currentTarget.style.color = "white"; e.currentTarget.style.transform = "translateY(-2px)"; e.currentTarget.style.boxShadow = "0 10px 28px rgba(201,113,31,0.28)"; }}
+            onMouseLeave={e => { e.currentTarget.style.background = "transparent"; e.currentTarget.style.color = "var(--brown)"; e.currentTarget.style.transform = ""; e.currentTarget.style.boxShadow = ""; }}
+          >⬇ Download Resume</a>
+
           <a href="https://github.com/pooja3122005" target="_blank" style={{
             background: "transparent", color: "var(--brown)",
             padding: "0.9rem 2.2rem", borderRadius: 50,
@@ -364,20 +453,23 @@ export default function App() {
         {/* Social row */}
         <div style={{ display: "flex", gap: "1.5rem", marginTop: "2.5rem", animation: "fadeUp 0.8s 0.5s ease both" }}>
           {[
-            { label: "LinkedIn", href: "https://linkedin.com/in/pooja-umanath-37154529b" },
-            { label: "LeetCode", href: "https://leetcode.com/u/PoojaU3/" },
-            { label: "HackerRank", href: "https://www.hackerrank.com/profile/poojaumanath3" },
-            { label: "GeeksForGeeks", href: "https://www.geeksforgeeks.org/profile/poojaumjg2t" },
+            { label: "LinkedIn", href: "https://linkedin.com/in/pooja-umanath-37154529b", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linkedin/linkedin-original.svg" },
+            { label: "LeetCode", href: "https://leetcode.com/u/PoojaU3/", icon: "https://cdn.simpleicons.org/leetcode" },
+            { label: "HackerRank", href: "https://www.hackerrank.com/profile/poojaumanath3", icon: "https://cdn.simpleicons.org/hackerrank" },
+            { label: "GeeksForGeeks", href: "https://www.geeksforgeeks.org/profile/poojaumjg2t", icon: "https://cdn.simpleicons.org/geeksforgeeks" },
           ].map(l => (
             <a key={l.label} href={l.href} target="_blank" style={{
               color: "var(--brown-m)", textDecoration: "none",
-              fontSize: "0.78rem", fontWeight: 600,
-              borderBottom: "1px dashed var(--sand-d)",
-              paddingBottom: 2, transition: "color 0.2s, border-color 0.2s",
+              fontSize: "0.85rem", fontWeight: 600,
+              display: "flex", alignItems: "center", gap: "0.45rem",
+              transition: "transform 0.25s, color 0.25s",
             }}
-              onMouseEnter={e => { e.target.style.color = "var(--amber-d)"; e.target.style.borderColor = "var(--amber-d)"; }}
-              onMouseLeave={e => { e.target.style.color = "var(--brown-m)"; e.target.style.borderColor = "var(--sand-d)"; }}
-            >{l.label}</a>
+              onMouseEnter={e => { e.currentTarget.style.color = "var(--amber-d)"; e.currentTarget.style.transform = "translateY(-2px)"; }}
+              onMouseLeave={e => { e.currentTarget.style.color = "var(--brown-m)"; e.currentTarget.style.transform = "translateY(0)"; }}
+            >
+              <img src={l.icon} alt={l.label} style={{ width: 16, height: 16 }} />
+              {l.label}
+            </a>
           ))}
         </div>
       </div>
@@ -479,8 +571,8 @@ export default function App() {
         { n: "4+", l: "Projects Built" },
         { n: "3", l: "Internships" },
         { n: "7+", l: "Certifications" },
-        { n: "2", l: "Hackathon Wins" },
-        { n: "84.3%", l: "HSC Score" },
+        { n: "1", l: "Hackathon Wins" },
+
       ].map((s, i) => (
         <div key={i} style={{ textAlign: "center" }}>
           <span style={{
@@ -570,7 +662,15 @@ export default function App() {
                     borderRadius: 50,
                     fontSize: "0.72rem", fontWeight: 500,
                     border: "1px solid var(--sand)",
-                  }}>{it}</span>
+                    display: "flex", alignItems: "center", gap: "0.4rem",
+                  }}>
+                    {it.logo.startsWith("http") ? (
+                      <img src={it.logo} alt={it.name} style={{ width: 14, height: 14 }} />
+                    ) : (
+                      <span style={{ fontSize: "0.85rem", lineHeight: 1 }}>{it.logo}</span>
+                    )}
+                    {it.name}
+                  </span>
                 ))}
               </div>
             </div>
@@ -672,6 +772,91 @@ export default function App() {
         >
           More projects on GitHub →
         </a>
+      </div>
+    </section>
+  );
+
+  // ── EDUCATION ─────────────────────────────────────────────────────
+  const Education = () => (
+    <section id="education" style={{ padding: "6rem", background: "var(--cream)" }}>
+      <Reveal>
+        <SectionHeader label="Academic Background" title="My <em style='color:var(--amber-d);font-style:italic'>Education</em>" />
+      </Reveal>
+      <div style={{ display: "flex", flexDirection: "column", gap: "2rem" }}>
+        {EDUCATION.map((edu, i) => (
+          <Reveal key={i} delay={i * 0.12}>
+            <div style={{
+              background: "white",
+              borderRadius: 24,
+              border: "1px solid var(--sand)",
+              padding: "2.5rem",
+              display: "grid",
+              gridTemplateColumns: "auto 1fr",
+              gap: "2rem",
+              alignItems: "flex-start",
+              transition: "all 0.3s",
+              boxShadow: "0 4px 20px rgba(45,21,6,0.04)",
+            }}
+              onMouseEnter={e => { e.currentTarget.style.boxShadow = "0 16px 48px rgba(45,21,6,0.12)"; e.currentTarget.style.transform = "translateY(-4px)"; }}
+              onMouseLeave={e => { e.currentTarget.style.boxShadow = "0 4px 20px rgba(45,21,6,0.04)"; e.currentTarget.style.transform = ""; }}
+            >
+              {/* Icon */}
+              <div style={{
+                width: 64, height: 64,
+                background: "linear-gradient(135deg, var(--blush), var(--amber-l))",
+                borderRadius: 20,
+                display: "flex", alignItems: "center", justifyContent: "center",
+                fontSize: "1.9rem",
+                flexShrink: 0,
+              }}>{edu.icon}</div>
+
+              {/* Info */}
+              <div>
+                <div style={{ display: "flex", alignItems: "center", gap: "1rem", flexWrap: "wrap", marginBottom: "0.5rem" }}>
+                  <h3 style={{
+                    fontFamily: "'Cormorant Garamond', serif",
+                    fontSize: "1.3rem", fontWeight: 700,
+                    color: "var(--brown)", margin: 0,
+                  }}>{edu.degree}</h3>
+                  <span style={{
+                    background: "rgba(232,144,58,0.12)",
+                    color: "var(--amber-d)",
+                    padding: "0.2rem 0.75rem",
+                    borderRadius: 50,
+                    fontSize: "0.68rem", fontWeight: 700,
+                    letterSpacing: "0.05em",
+                    whiteSpace: "nowrap",
+                  }}>{edu.type}</span>
+                </div>
+
+                <div style={{
+                  display: "flex", alignItems: "center", gap: "1.2rem",
+                  marginBottom: "0.8rem", flexWrap: "wrap",
+                }}>
+                  <span style={{
+                    fontSize: "0.88rem", fontWeight: 600,
+                    color: "var(--amber-d)",
+                    display: "flex", alignItems: "center", gap: "0.3rem",
+                  }}>🏛 {edu.school}</span>
+
+                  <span style={{
+                    fontFamily: "'JetBrains Mono', monospace",
+                    fontSize: "0.75rem",
+                    color: "var(--brown-m)",
+                    display: "flex", alignItems: "center", gap: "0.3rem",
+                  }}>📅 {edu.period}</span>
+                </div>
+
+                <p style={{
+                  fontSize: "0.88rem",
+                  color: "var(--brown-m)",
+                  lineHeight: 1.75,
+                  margin: 0,
+                }}>{edu.detail}</p>
+              </div>
+            </div>
+          </Reveal>
+        ))}
       </div>
     </section>
   );
@@ -881,19 +1066,23 @@ export default function App() {
 
         <div style={{ display: "flex", justifyContent: "center", gap: "2.5rem", flexWrap: "wrap" }}>
           {[
-            { label: "GitHub", href: "https://github.com/pooja3122005" },
-            { label: "LinkedIn", href: "https://linkedin.com/in/pooja-umanath-37154529b" },
-            { label: "LeetCode", href: "https://leetcode.com/u/PoojaU3/" },
-            { label: "HackerRank", href: "https://www.hackerrank.com/profile/poojaumanath3" },
+            { label: "GitHub", href: "https://github.com/pooja3122005", icon: "https://cdn.simpleicons.org/github/white" },
+            { label: "LinkedIn", href: "https://linkedin.com/in/pooja-umanath-37154529b", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linkedin/linkedin-original.svg" },
+            { label: "LeetCode", href: "https://leetcode.com/u/PoojaU3/", icon: "https://cdn.simpleicons.org/leetcode/white" },
+            { label: "HackerRank", href: "https://www.hackerrank.com/profile/poojaumanath3", icon: "https://cdn.simpleicons.org/hackerrank/white" },
           ].map(l => (
             <a key={l.label} href={l.href} target="_blank" style={{
               color: "rgba(255,255,255,0.75)", textDecoration: "none",
               fontSize: "0.85rem", fontWeight: 600,
-              transition: "color 0.2s",
+              display: "flex", alignItems: "center", gap: "0.5rem",
+              transition: "transform 0.25s, color 0.25s",
             }}
-              onMouseEnter={e => e.target.style.color = "white"}
-              onMouseLeave={e => e.target.style.color = "rgba(255,255,255,0.75)"}
-            >{l.label} →</a>
+              onMouseEnter={e => { e.currentTarget.style.color = "white"; e.currentTarget.style.transform = "translateY(-2px)"; e.currentTarget.querySelector("img").style.opacity = "1"; }}
+              onMouseLeave={e => { e.currentTarget.style.color = "rgba(255,255,255,0.75)"; e.currentTarget.style.transform = "translateY(0)"; e.currentTarget.querySelector("img").style.opacity = "0.75"; }}
+            >
+              <img src={l.icon} alt={l.label} style={{ width: 18, height: 18, opacity: 0.75, transition: "opacity 0.25s" }} />
+              {l.label}
+            </a>
           ))}
         </div>
       </Reveal>
@@ -914,6 +1103,7 @@ export default function App() {
   // ── MODAL ─────────────────────────────────────────────────────────
   const Modal = () => {
     if (!activeModal) return null;
+    const modalImages = [activeModal.img, activeModal.img2].filter(Boolean);
     return (
       <div
         onClick={() => setActiveModal(null)}
@@ -960,9 +1150,18 @@ export default function App() {
             color: "var(--brown)", marginBottom: "1.2rem",
           }}>{activeModal.place}</h3>
 
-          {activeModal.img ? (
-            <div style={{ width: "100%", height: 200, marginBottom: "1.5rem", display: "flex", alignItems: "center", justifyContent: "center" }}>
-              <img src={activeModal.img} alt={activeModal.event} style={{ maxWidth: "100%", maxHeight: 200, borderRadius: 12, objectFit: "cover" }} />
+          {modalImages.length ? (
+            <div style={{
+              display: "grid",
+              gridTemplateColumns: modalImages.length > 1 ? "1fr 1fr" : "1fr",
+              gap: "1rem",
+              marginBottom: "1.5rem",
+            }}>
+              {modalImages.map((src, index) => (
+                <div key={index} style={{ width: "100%", height: 200, borderRadius: 12, overflow: "hidden", background: "rgba(255,255,255,0.4)" }}>
+                  <img src={src} alt={`${activeModal.event} screenshot ${index + 1}`} style={{ width: "100%", height: "100%", objectFit: "cover" }} />
+                </div>
+              ))}
             </div>
           ) : (
             <div style={{
@@ -992,6 +1191,7 @@ export default function App() {
       <StatsBar />
       <Skills />
       <Projects />
+      <Education />
       <Experience />
       <Achievements />
       <Certifications />
